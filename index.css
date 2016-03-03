@@ -1,0 +1,55 @@
+h1 {    text-align: center }
+span {    display: inline-block }
+span {
+    background: #FFF;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 5px;
+    border: 2px solid #000;
+}
+#background-box {
+    width: 474px;
+    background-color: brown;
+}
+#inner-box {
+    width: 340px;
+    background-color: gray;
+    text-align: center;
+}
+.guess-circles, .score-pegs {
+  display: inline-block;
+background: #8cc;
+}
+.score-pegs {
+  width: 60px;
+}
+.score-pegs span {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background: transparent;
+}
+.row {
+    border: 0;
+    height: 66px;
+    background: #333;
+    width: 340px;
+}
+#color-choices div {
+  /*Circles to choose from*/
+  height: 50px;
+  width: 30px;
+  border-radius: 50px;  
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+ul {list-style-type: none;}
+li {display: inline-block;}
+.red {    background-color: red; }
+.yellow {    background-color: yellow; }
+.blue {    background-color: blue; }
+.green {    background-color: green; }
+.turquoise {    background-color: turquoise; }
+.magenta {    background-color: magenta; }

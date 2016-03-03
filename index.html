@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet"type="text/css" href="index.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1> Mastermind </h1>
+        <!-- This is the current guess, it is populated by clicking on the palette displayed in #inner-box 
+            Maximum pegs is 4, chosen in order, 'Score' button sends it to the game board. 'Reset' button clears it so you can start over without penalty 
+            Done this way, so that you can pick your move in 5 clicks instead of 9 
+            Example: Red, Yellow, Magenta, Blue, Score Button would be 5 clicks
+            Red, Slot 1, Magenta, Slot 3, Yellow, Slot 2, Blue, Slot 4, Score would be 9 clicks -->
+        <div id ="current-guess">
+<ul>
+<!-- li is added by app.js on ln 64 -->
+</ul>
+            <button id="score-btn">Score</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <!-- This represents the board and the colors you can choose from -->
+        <div id ="background-box">
+            <div id ='inner-box'>
+            <div id ='color-choices'>
+                <div class ='red'>
+                </div>
+                <div class ='yellow'>
+                </div>
+                <div class ='magenta'>
+                </div>
+                <div class ='blue'>
+                </div>
+                <div class ='turquoise'>
+                </div>
+                <div class ='green'>
+                </div>
+              </div>
+                <!-- This is the board with the lines and your guessing circles, there are 12 rows -->
+                <div class="row" id="row-1">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-2">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-3">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-4">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-5">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-6">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-7">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-8">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-9">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-10">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-11">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+                <div class="row" id="row-12">
+                    <div class="guess-circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end guess-circles -->
+                    <div class="score-pegs">
+                        <span></span>  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- end score-pegs -->
+                </div>
+                <!-- end row -->
+            </div>
+        </div>
+    </body>
+</html>
